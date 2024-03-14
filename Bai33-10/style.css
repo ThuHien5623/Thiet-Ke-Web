@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #212529;
+}
+
+/* nav */
+.nav {
+    background-color: #f8f9fa;
+    color: #000;
+    display: flex;
+    padding:10px 9%;
+    cursor: pointer;
+}
+
+.subnav.left {
+    flex-basis: 18%;
+}
+
+.subnav-start {
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.subnav-icon {
+    display: none;
+}
+
+.subnav-right {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 82%;
+}
+
+.subnav.list {
+    display: flex;
+}
+
+.subnav-item {
+    padding-top: 7px;
+    padding-right: 20px;
+}
+
+.subnav-item.gray {
+    color: gray;
+}
+
+.subnav-item.gray:hover {
+    color: #121417;
+}
+
+.subnav-item.gray.shop::after {
+    content: "";
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.subnav.cart {
+    border: 1px solid #000;
+    padding: 7px 15px;
+    border-radius: 7px;
+}
+
+.subnav.cart:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* header */
+.header {
+    display: flex;
+    margin: 100px 9%;
+}
+
+.header__img {
+    flex-basis: 47%;
+}
+
+.header__image {
+    width: 100%;
+    height: auto;
+}
+
+.header-ct {
+    flex-basis: 53%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-left: 50px;
+}
+
+.header-ct__sku {
+    font-size: 15px;
+}
+
+.header-ct__title {
+    font-size: 48px;
+    padding-bottom: 10px;
+}
+
+.header-ct__price {
+    display: flex;
+    font-size: 20px;
+    padding-bottom: 60px;
+}
+
+.price1 {
+    text-decoration: line-through;
+    padding-right: 10px;
+}
+
+.header-ct__desc {
+    font-size: 20px;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+.header-ct__text {
+    width: 50px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 7px;
+    border: 1px solid #cbcbcb;
+    margin-right: 10px;
+}
+
+.header-ct__btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 7px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.header-ct__btn:hover {
+    background-color: #212529;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* main */
+.main {
+    padding: 100px 9%;
+    background-color: #f8f9fa;
+}
+
+.box {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+.box-item {
+    border-radius: 7px;
+    border: 1px solid #cbcbcb;
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    width: 100%;
+    height: 150px;
+    border-radius: 7px 7px 0 0;
+}
+
+.sale {
+    display: flex;
+    align-self: flex-end;
+    margin: 10px;
+    position: absolute;
+    background-color: #212529;
+    color: #ffffff;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+.box-ct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.box-ct__title {
+    padding-bottom: 10px;
+}
+
+.price {
+    display: flex;
+}
+
+.p2 {
+    text-decoration: line-through;
+    color: gray;
+    padding-right: 5px;
+}
+
+.box__btn {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box__button {
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    background-color: #f8f9fa;
+}
+
+.box__button:hover {
+    background-color: #212529;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* footer */
+.footer {
+    padding: 50px;
+    background-color: #212529;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+    .nav {
+        flex-direction: column;
+    }
+    
+    .subnav.left {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .subnav-icon {
+        display: inline;
+        padding: 5px 10px;
+        font-size: 15px;
+        border-radius: 7px;
+        border: 1px solid #cbcbcb;
+    }   
+
+    .subnav-right {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header-ct {
+        padding-top: 20px;
+        padding-left: 0;
+    }
+}
